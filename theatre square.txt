@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "RU");
+
+	float s, n, m, a;
+	int res, ost, otv;
+	cout << "Введите ширину n: " << endl; cin >> n;
+	cout << "Введите длину m: " << endl; cin >> m;
+	cout << "Введите ширину плиты a: " << endl; cin >> a;
+
+	s = m * n;
+	res = s / (a * a) * 100;
+	ost = res % 100;
+	if (ost >= 1)
+		otv = res / 100 + 1;
+	if (ost >= 1)
+		cout << otv;
+	else
+		cout << res / 100;
+
+	if (n <= 0 || m <= 0 || a <= 0)
+		cout << "Введите корректное значение!" << endl;
+ }
